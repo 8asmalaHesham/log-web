@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bondi</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bondi.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+      <div class="container">
+      
+        <a class="navbar-brand fs-4 fw-bold" href="#home"><img src="logo.png" alt="Logo"
+            class="logo-img me-2"> BATU Library</a>
+          <button 
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main"
+          aria-controls="main"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="main">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link p-2 p-lg-3" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2 p-lg-3" href="#">Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2 p-lg-3" href="#">Collections</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2 p-lg-3" href="#">Contact</a>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">
+                  <img src="Screenshot 2024-12-27 161422.png" alt=" " class="contact-icon me-2">
+                </a>
+              </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="landing d-flex justify-content-center align-items-center">
+      <div class="text-center login-form">
+        <h1 class="welcome-text">Welcome To BATU’s Library</h1>
+        <form action="">
+          <p>
+            
+            <label class="field-label" for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="styled-input"
+              required
+            />
+          </p>
+          <p>
+            <label class="field-label" for="password">Password</label>
+            <div class="input-container">
+              <input
+                type="password"
+                id="password"
+                class="styled-input"
+                required
+              />
+              <i class="fa-solid fa-eye-slash" id="togglePassword" style="cursor: pointer;"></i>
+            </div>
+          </p>
+          <a class="forgot-password" href="#">Forgot Password?</a>
+          <button class=" rounded btn pill main-btn" type="submit">Log in</button>
+          
+        </form>
+        <p class="fs-6 mt-4">
+          Don't have an account?
+          <a href="#" class="text-danger">Sign up now</a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const togglePassword = document.getElementById("togglePassword");
+      const passwordField = document.getElementById("password");
+
+      togglePassword.addEventListener("click", function () {
+        
+        const type = passwordField.type === "password" ? "text" : "password";
+        passwordField.type = type;
+
+        this.classList.toggle("fa-eye");
+        this.classList.toggle("fa-eye-slash");
+      });
+    </script>
+  </body>
+</html>
+
+
+
+          
+        
